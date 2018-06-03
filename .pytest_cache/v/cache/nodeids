@@ -1,3 +1,7 @@
 [
-  "tests/test_trie_insertion_deletion.py::test_update_get_different_roots"
+  "tests/test_trie_insertion_deletion.py::test_update_get_from_trie_small",
+  "tests/test_trie_insertion_deletion.py::test_update_get_from_trie_large",
+  "tests/test_trie_insertion_deletion.py::test_update_get_different_roots",
+  "tests/test_trie_insertion_deletion.py::test_non_existing_keys",
+  "tests/test_trie_insertion_deletion.py::test_non_existing_keys_large"
 ]

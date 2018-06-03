@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f9b38bff-cf9f-4603-83ef-05663b3a0f1a" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/serializer/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/trie/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trie/trie.py" beforeDir="false" afterPath="$PROJECT_DIR$/trie/trie.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,28 +12,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/trie/trie.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="4" selection-start-line="4" selection-end-line="4" />
+            <state relative-caret-position="386">
+              <caret line="114" column="20" selection-start-line="114" selection-start-column="20" selection-end-line="114" selection-end-column="20" />
               <folding>
-                <marker date="1528060107323" expanded="true" signature="2175:2194" ph="..." />
-                <marker date="1528060107323" expanded="true" signature="12389:12578" ph="..." />
+                <element signature="e#0#25#0" expanded="true" />
+                <marker date="1528063547148" expanded="true" signature="2175:2194" ph="..." />
+                <marker date="1528063547148" expanded="true" signature="12806:12995" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/test_trie_insertion_deletion.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="47" column="48" lean-forward="true" selection-start-line="47" selection-end-line="47" selection-end-column="48" />
+            <state relative-caret-position="327">
+              <caret line="138" column="39" selection-start-line="138" selection-start-column="39" selection-end-line="138" selection-end-column="39" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
-                <marker date="1528060663169" expanded="true" signature="146:488" ph="..." />
-                <marker date="1528060663169" expanded="true" signature="1231:1232" ph="..." />
+                <marker date="1528063377230" expanded="true" signature="161:516" ph="..." />
+                <marker date="1528063377230" expanded="true" signature="1259:1260" ph="..." />
+                <marker date="1528063377230" expanded="true" signature="2510:2515" ph="..." />
+                <marker date="1528063377230" expanded="true" signature="3702:3703" ph="..." />
               </folding>
             </state>
           </provider>
@@ -120,6 +120,7 @@
       <find>b'k1'</find>
       <find>tests</find>
       <find>test</find>
+      <find>KeyError</find>
     </findStrings>
     <replaceStrings>
       <replace>k</replace>
@@ -139,12 +140,12 @@
         <option value="$PROJECT_DIR$/tests/conftest.py" />
         <option value="$PROJECT_DIR$/serializer/rlp.py" />
         <option value="$PROJECT_DIR$/tests/helper.py" />
-        <option value="$PROJECT_DIR$/trie/trie.py" />
         <option value="$PROJECT_DIR$/serializer/serializer.py" />
-        <option value="$PROJECT_DIR$/tests/test_trie_insertion_deletion.py" />
         <option value="$PROJECT_DIR$/trie/__init__.py" />
         <option value="$PROJECT_DIR$/serializer/__init__.py" />
         <option value="$PROJECT_DIR$/setup.py" />
+        <option value="$PROJECT_DIR$/tests/test_trie_insertion_deletion.py" />
+        <option value="$PROJECT_DIR$/trie/trie.py" />
       </list>
     </option>
   </component>
@@ -215,7 +216,22 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.py.test for test_trie_insertion_deletion.test_update_get_different_roots">
+  <component name="RunManager" selected="Python tests.py.test in test_trie_insertion_deletion.py">
+    <configuration name="py.test for test_trie_insertion_deletion.test_non_existing_keys" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="python_merkle_patricia_trie" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_trie_insertion_deletion.test_non_existing_keys&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
     <configuration name="py.test for test_trie_insertion_deletion.test_update_get_different_roots" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="python_merkle_patricia_trie" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -265,11 +281,13 @@
       <item itemvalue="Python tests.py.test in test_trie_insertion_deletion.py" />
       <item itemvalue="Python tests.py.test for test_trie_insertion_deletion.test_update_get_from_trie_large" />
       <item itemvalue="Python tests.py.test for test_trie_insertion_deletion.test_update_get_different_roots" />
+      <item itemvalue="Python tests.py.test for test_trie_insertion_deletion.test_non_existing_keys" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.py.test for test_trie_insertion_deletion.test_update_get_different_roots" />
         <item itemvalue="Python tests.py.test in test_trie_insertion_deletion.py" />
+        <item itemvalue="Python tests.py.test for test_trie_insertion_deletion.test_non_existing_keys" />
+        <item itemvalue="Python tests.py.test for test_trie_insertion_deletion.test_update_get_different_roots" />
         <item itemvalue="Python tests.py.test for test_trie_insertion_deletion.test_update_get_from_trie_large" />
       </list>
     </recent_temporary>
@@ -288,35 +306,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="py_test_for_test_trie_insertion_deletion_test_update_get_different_roots - 2018.06.03 at 14h 59m 54s.xml">
-      <configuration name="py.test for test_trie_insertion_deletion.test_update_get_different_roots" configurationId="tests" />
-    </history-entry>
-    <history-entry file="py_test_for_test_trie_insertion_deletion_test_update_get_different_roots - 2018.06.03 at 15h 01m 58s.xml">
-      <configuration name="py.test for test_trie_insertion_deletion.test_update_get_different_roots" configurationId="tests" />
-    </history-entry>
-    <history-entry file="py_test_for_test_trie_insertion_deletion_test_update_get_different_roots - 2018.06.03 at 15h 03m 26s.xml">
-      <configuration name="py.test for test_trie_insertion_deletion.test_update_get_different_roots" configurationId="tests" />
-    </history-entry>
-    <history-entry file="py_test_for_test_trie_insertion_deletion_test_update_get_different_roots - 2018.06.03 at 15h 03m 49s.xml">
-      <configuration name="py.test for test_trie_insertion_deletion.test_update_get_different_roots" configurationId="tests" />
-    </history-entry>
-    <history-entry file="py_test_in_test_trie_insertion_deletion_py - 2018.06.03 at 15h 07m 57s.xml">
+    <history-entry file="py_test_in_test_trie_insertion_deletion_py - 2018.06.03 at 15h 50m 03s.xml">
       <configuration name="py.test in test_trie_insertion_deletion.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_for_test_trie_insertion_deletion_test_update_get_different_roots - 2018.06.03 at 15h 08m 06s.xml">
-      <configuration name="py.test for test_trie_insertion_deletion.test_update_get_different_roots" configurationId="tests" />
+    <history-entry file="py_test_for_test_trie_insertion_deletion_test_non_existing_keys - 2018.06.03 at 15h 51m 49s.xml">
+      <configuration name="py.test for test_trie_insertion_deletion.test_non_existing_keys" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_for_test_trie_insertion_deletion_test_update_get_different_roots - 2018.06.03 at 15h 10m 21s.xml">
-      <configuration name="py.test for test_trie_insertion_deletion.test_update_get_different_roots" configurationId="tests" />
+    <history-entry file="py_test_for_test_trie_insertion_deletion_test_non_existing_keys - 2018.06.03 at 15h 53m 33s.xml">
+      <configuration name="py.test for test_trie_insertion_deletion.test_non_existing_keys" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_for_test_trie_insertion_deletion_test_update_get_different_roots - 2018.06.03 at 15h 11m 30s.xml">
-      <configuration name="py.test for test_trie_insertion_deletion.test_update_get_different_roots" configurationId="tests" />
+    <history-entry file="py_test_for_test_trie_insertion_deletion_test_non_existing_keys - 2018.06.03 at 15h 56m 42s.xml">
+      <configuration name="py.test for test_trie_insertion_deletion.test_non_existing_keys" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_for_test_trie_insertion_deletion_test_update_get_different_roots - 2018.06.03 at 15h 17m 46s.xml">
-      <configuration name="py.test for test_trie_insertion_deletion.test_update_get_different_roots" configurationId="tests" />
+    <history-entry file="py_test_for_test_trie_insertion_deletion_test_non_existing_keys - 2018.06.03 at 15h 56m 45s.xml">
+      <configuration name="py.test for test_trie_insertion_deletion.test_non_existing_keys" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_for_test_trie_insertion_deletion_test_update_get_different_roots - 2018.06.03 at 15h 18m 03s.xml">
-      <configuration name="py.test for test_trie_insertion_deletion.test_update_get_different_roots" configurationId="tests" />
+    <history-entry file="py_test_in_test_trie_insertion_deletion_py - 2018.06.03 at 15h 57m 13s.xml">
+      <configuration name="py.test in test_trie_insertion_deletion.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="py_test_for_test_trie_insertion_deletion_test_non_existing_keys - 2018.06.03 at 15h 59m 57s.xml">
+      <configuration name="py.test for test_trie_insertion_deletion.test_non_existing_keys" configurationId="tests" />
+    </history-entry>
+    <history-entry file="py_test_in_test_trie_insertion_deletion_py - 2018.06.03 at 16h 02m 48s.xml">
+      <configuration name="py.test in test_trie_insertion_deletion.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="py_test_in_test_trie_insertion_deletion_py - 2018.06.03 at 16h 03m 47s.xml">
+      <configuration name="py.test in test_trie_insertion_deletion.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="py_test_in_test_trie_insertion_deletion_py - 2018.06.03 at 16h 04m 43s.xml">
+      <configuration name="py.test in test_trie_insertion_deletion.py" configurationId="tests" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -333,7 +351,7 @@
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32919255" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32919255" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32919255" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39958593" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -353,8 +371,8 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/trie/trie.py</url>
-          <line>195</line>
-          <option name="timeStamp" value="11" />
+          <line>118</line>
+          <option name="timeStamp" value="20" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -497,17 +515,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/trie/trie.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-          <folding>
-            <marker date="1528060107323" expanded="true" signature="2175:2194" ph="..." />
-            <marker date="1528060107323" expanded="true" signature="12389:12578" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/trie/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -543,12 +550,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/test_trie_insertion_deletion.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="47" column="48" lean-forward="true" selection-start-line="47" selection-end-line="47" selection-end-column="48" />
+        <state relative-caret-position="327">
+          <caret line="138" column="39" selection-start-line="138" selection-start-column="39" selection-end-line="138" selection-end-column="39" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
-            <marker date="1528060663169" expanded="true" signature="146:488" ph="..." />
-            <marker date="1528060663169" expanded="true" signature="1231:1232" ph="..." />
+            <marker date="1528063377230" expanded="true" signature="161:516" ph="..." />
+            <marker date="1528063377230" expanded="true" signature="1259:1260" ph="..." />
+            <marker date="1528063377230" expanded="true" signature="2510:2515" ph="..." />
+            <marker date="1528063377230" expanded="true" signature="3702:3703" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trie/trie.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="386">
+          <caret line="114" column="20" selection-start-line="114" selection-start-column="20" selection-end-line="114" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+            <marker date="1528063547148" expanded="true" signature="2175:2194" ph="..." />
+            <marker date="1528063547148" expanded="true" signature="12806:12995" ph="..." />
           </folding>
         </state>
       </provider>
