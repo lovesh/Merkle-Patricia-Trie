@@ -53,7 +53,7 @@ class Trie:
 
     def get(self, key, root_node=None, with_proof=False):
         root_node = root_node or self.root_node
-        proof_nodes = []
+        proof_nodes = [] if with_proof else None
         val = self._get(root_node, self.key_to_nibbles(key), proof_nodes=proof_nodes)
         if with_proof:
             return val, proof_nodes
@@ -112,7 +112,7 @@ class Trie:
         :param node: node in form of list, or BLANK_NODE
         :param key: nibble list without terminator
         :return:
-            BLANK_NODE if does not exist, otherwise value or hash
+            KeyError if does not exist, otherwise value or hash
         """
         node_type = self._get_node_type(node)
 
@@ -124,23 +124,34 @@ class Trie:
             if not key:
                 return node[-1]
             sub_node = self._decode_to_node(node[key[0]])
+            if sub_node == BLANK_NODE and key:
+                # TODO: Add proof to exception
+                raise KeyError
             self._update_proof_nodes(node[key[0]], sub_node, proof_nodes=proof_nodes)
             return self._get(sub_node, key[1:], proof_nodes)
 
         # key value node
         curr_key = self.key_nibbles_from_key_value_node(node)
         if node_type == NODE_TYPE_LEAF:
-            return node[1] if key == curr_key else BLANK_NODE
+            if key == curr_key:
+                return node[1]
+            else:
+                # TODO: Add proof to exception
+                raise KeyError
 
         if node_type == NODE_TYPE_EXTENSION:
             # traverse child nodes
             if starts_with(key, curr_key):
                 sub_node = self._get_inner_node_from_extension(node)
+                if sub_node == BLANK_NODE and key[len(curr_key):]:
+                    # TODO: Add proof to exception
+                    raise KeyError
                 self._update_proof_nodes(node[1], sub_node,
                                          proof_nodes=proof_nodes)
                 return self._get(sub_node, key[len(curr_key):], proof_nodes)
             else:
-                return BLANK_NODE
+                # TODO: Add proof to exception
+                raise KeyError
 
     def _update(self, node, key, value):
         """ update item inside a node
@@ -354,7 +365,8 @@ class Trie:
             proof_nodes.append(deepcopy(new_node))
 
     @staticmethod
-    def verify_proof(root, key, value, proof_nodes):
+    def verify_proof_of_existence(root, key, value, proof_nodes):
+        # Checks that `key` exists with `value` in the trie
         # NOTE: `root` is a derivative of the last element of `proof_nodes`
         # but it's important to keep `root` as a separate as signed root
         # hashes will be published.
