@@ -7,7 +7,7 @@ from trie.constants import BLANK_NODE, NODE_TYPE_BLANK, NODE_TYPE_LEAF, \
     NODE_TYPE_EXTENSION, NODE_TYPE_BRANCH, NIBBLE_TERMINATOR
 from trie.utils import without_terminator, unpack_to_nibbles, str_to_bytes, \
     bin_to_nibbles, is_bytes, nibbles_to_bin, nibble_to_bytes, pack_nibbles, \
-    with_terminator, starts_with
+    with_terminator, starts_with, without_terminator_and_flags
 
 
 class Trie:
@@ -60,9 +60,31 @@ class Trie:
         else:
             return val
 
-    def get_node_for_prefix(self, key, root_node=None, with_proof=False):
-        # TODO:
-        pass
+    def get_keys_with_prefix(self, key_prefix, root_node=None, get_value=True,
+                             with_proof=False):
+        root_node = root_node or self.root_node
+        proof_nodes = [] if with_proof else None
+        seen_prefix = []
+        prefix_node = self._get_last_node_for_prfx(root_node,
+                                                   self.key_to_nibbles(key_prefix),
+                                                   seen_prfx=seen_prefix,
+                                                   proof_nodes=proof_nodes)
+
+        rv = self._to_dict(prefix_node, proof_nodes=proof_nodes)
+        # If values are needed then convert the keys appropriately
+        if get_value:
+            new_rv = {}
+            for k, v in rv.items():
+                # Add the seen prefix to each key
+                k_ = seen_prefix + [int(x) for x in k.split(b'+')]
+                new_rv[nibbles_to_bin(without_terminator_and_flags(k_))] = v
+
+            rv = new_rv
+
+        if with_proof:
+            return rv, proof_nodes
+        else:
+            return rv
 
     def update(self, key, value):
         """
@@ -112,7 +134,7 @@ class Trie:
         :param node: node in form of list, or BLANK_NODE
         :param key: nibble list without terminator
         :return:
-            KeyError if does not exist, otherwise value or hash
+            KeyError if does not exist, otherwise value
         """
         node_type = self._get_node_type(node)
 
@@ -152,6 +174,63 @@ class Trie:
             else:
                 # TODO: Add proof to exception
                 raise KeyError
+
+    def _get_last_node_for_prfx(self, node, key_prfx, seen_prfx, proof_nodes=None):
+        """ get last node for the given prefix, also update `seen_prfx` to track the path already traversed
+        :param node: node in form of list, or BLANK_NODE
+        :param key_prfx: prefix to look for
+        :param seen_prfx: prefix already seen, updates with each call
+        :return:
+            KeyError if does not exist, otherwise node
+        """
+        node_type = self._get_node_type(node)
+
+        if node_type == NODE_TYPE_BLANK:
+            return BLANK_NODE
+
+        if node_type == NODE_TYPE_BRANCH:
+            # already reach the expected node
+            if not key_prfx:
+                return node
+            sub_node = self._decode_to_node(node[key_prfx[0]])
+            seen_prfx.append(key_prfx[0])
+            self._update_proof_nodes(node[key_prfx[0]], sub_node,
+                                     proof_nodes=proof_nodes)
+            return self._get_last_node_for_prfx(sub_node, key_prfx[1:],
+                                                seen_prfx, proof_nodes=proof_nodes)
+
+        # key value node
+        curr_key = self.key_nibbles_from_key_value_node(node)
+
+        if node_type == NODE_TYPE_LEAF:
+            # Return this node only if the complete prefix is part of the current key
+            if starts_with(curr_key, key_prfx):
+                # Do not update `seen_prefix` as node has the prefix
+                return node
+            else:
+                return BLANK_NODE
+
+        if node_type == NODE_TYPE_EXTENSION:
+            # traverse child nodes
+            if len(key_prfx) > len(curr_key):
+                if starts_with(key_prfx, curr_key):
+                    sub_node = self._get_inner_node_from_extension(node)
+                    seen_prfx.extend(curr_key)
+                    self._update_proof_nodes(node[1], sub_node,
+                                             proof_nodes=proof_nodes)
+                    return self._get_last_node_for_prfx(sub_node,
+                                                        key_prfx[
+                                                        len(curr_key):],
+                                                        seen_prfx,
+                                                        proof_nodes)
+                else:
+                    return BLANK_NODE
+            else:
+                if starts_with(curr_key, key_prfx):
+                    # Do not update `seen_prefix` as node has the prefix
+                    return node
+                else:
+                    return BLANK_NODE
 
     def _update(self, node, key, value):
         """ update item inside a node
@@ -244,7 +323,7 @@ class Trie:
         else:
             return new_node
 
-    def _to_dict(self, node):
+    def _to_dict(self, node, proof_nodes=None):
         """convert (key, value) stored in this and the descendant nodes
         to dict items.
         :param node: node in form of list, or BLANK_NODE
@@ -260,7 +339,10 @@ class Trie:
             nibbles = self.key_nibbles_from_key_value_node(node)
             key = b'+'.join([nibble_to_bytes(x) for x in nibbles])
             if node_type == NODE_TYPE_EXTENSION:
-                sub_dict = self._to_dict(self._get_inner_node_from_extension(node))
+                sub_node = self._get_inner_node_from_extension(node)
+                self._update_proof_nodes(node[1], sub_node,
+                                         proof_nodes=proof_nodes)
+                sub_dict = self._to_dict(sub_node, proof_nodes)
             else:
                 sub_dict = {nibble_to_bytes(NIBBLE_TERMINATOR): node[1]}
 
@@ -274,8 +356,10 @@ class Trie:
         elif node_type == NODE_TYPE_BRANCH:
             res = {}
             for i in range(16):
-                sub_dict = self._to_dict(self._decode_to_node(node[i]))
-
+                sub_node = self._decode_to_node(node[i])
+                self._update_proof_nodes(node[i], sub_node,
+                                         proof_nodes=proof_nodes)
+                sub_dict = self._to_dict(sub_node, proof_nodes)
                 for sub_key, sub_value in sub_dict.items():
                     full_key = (
                             str_to_bytes(
@@ -382,6 +466,32 @@ class Trie:
         return False
 
     @staticmethod
+    def verify_proof_of_existence_multi_keys(root, key_values, proof_nodes):
+        # Checks that all key and their corresponding values in  `key_values` exist in the trie
+        # NOTE: `root` is a derivative of the last element of `proof_nodes`
+        # but it's important to keep `root` as a separate as signed root
+        # hashes will be published.
+
+        new_trie = Trie.get_new_trie_with_proof_nodes(proof_nodes)
+
+        try:
+            new_trie.root_hash = root
+        except Exception as e:
+            print(e)
+            return False
+
+        for k, v in key_values.items():
+            try:
+                _v = new_trie.get(k)
+            except Exception as e:
+                print(e)
+                return False
+            if v != _v:
+                return False
+
+        return True
+
+    @staticmethod
     def get_new_trie_with_proof_nodes(proof_nodes,
                                       node_serializer=RLPSerializer):
         new_trie = Trie(EphemDB())
@@ -435,3 +545,11 @@ class Trie:
         if isinstance(value, int):
             return str(value).encode()
         return str_to_bytes(value)
+
+    @staticmethod
+    def key_str_to_bytes(key_str):
+        if key_str:
+            nibbles = [int(x) for x in key_str.split(b'+')]
+        else:
+            nibbles = []
+        return nibbles_to_bin(without_terminator_and_flags(nibbles))
