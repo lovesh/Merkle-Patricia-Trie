@@ -1,0 +1,557 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f9b38bff-cf9f-4603-83ef-05663b3a0f1a" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/serializer/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trie/__init__.py" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/trie/trie.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="84">
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
+              <folding>
+                <marker date="1528060107323" expanded="true" signature="2175:2194" ph="..." />
+                <marker date="1528060107323" expanded="true" signature="12389:12578" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tests/test_trie_insertion_deletion.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="264">
+              <caret line="47" column="48" lean-forward="true" selection-start-line="47" selection-end-line="47" selection-end-column="48" />
+              <folding>
+                <element signature="e#0#25#0" expanded="true" />
+                <marker date="1528060663169" expanded="true" signature="146:488" ph="..." />
+                <marker date="1528060663169" expanded="true" signature="1231:1232" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/trie/constants.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="231">
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/setup.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="483">
+              <caret line="23" column="12" lean-forward="true" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
+              <folding>
+                <element signature="e#138#147#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.virtualenvs/python_merkle_patricia_trie/lib/python3.5/site-packages/setuptools-39.1.0-py3.5.egg!/setuptools/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="207">
+              <caret line="125" column="4" selection-start-line="125" selection-start-column="4" selection-end-line="125" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/helper.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+                <marker date="1528058730265" expanded="true" signature="54:55" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>encode_op</find>
+      <find>adapt_terminator</find>
+      <find>pack_nibbles(with_terminator</find>
+      <find>pack_nibbles</find>
+      <find>unpack_to_nibbles</find>
+      <find>without_terminator(unpack_to_nibbles</find>
+      <find>BLANK_ROOT</find>
+      <find>_get</find>
+      <find>prefix</find>
+      <find>add_terminator=True</find>
+      <find>add_terminator</find>
+      <find>remove_terminator</find>
+      <find>_get_inner_node_from_extension</find>
+      <find>self._decode_to_node(</find>
+      <find>self._get_inner_node_from_extension(node)</find>
+      <find>self._decode_to_node(node[1])</find>
+      <find>bin_to_nibbles</find>
+      <find>self._get(</find>
+      <find>verif</find>
+      <find>proof</find>
+      <find>proof_nodes</find>
+      <find>b'k1'</find>
+      <find>tests</find>
+      <find>test</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>k</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/serializer/hasher.py" />
+        <option value="$PROJECT_DIR$/storage/ephem_db.py" />
+        <option value="$PROJECT_DIR$/trie/utils.py" />
+        <option value="$PROJECT_DIR$/storage/refcount_db.py" />
+        <option value="$PROJECT_DIR$/trie/constants.py" />
+        <option value="$PROJECT_DIR$/tests/conftest.py" />
+        <option value="$PROJECT_DIR$/serializer/rlp.py" />
+        <option value="$PROJECT_DIR$/tests/helper.py" />
+        <option value="$PROJECT_DIR$/trie/trie.py" />
+        <option value="$PROJECT_DIR$/serializer/serializer.py" />
+        <option value="$PROJECT_DIR$/tests/test_trie_insertion_deletion.py" />
+        <option value="$PROJECT_DIR$/trie/__init__.py" />
+        <option value="$PROJECT_DIR$/serializer/__init__.py" />
+        <option value="$PROJECT_DIR$/setup.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="width" value="1920" />
+    <option name="height" value="1045" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="python_merkle_patricia_trie" type="b2602c69:ProjectViewProjectNode" />
+              <item name="python_merkle_patricia_trie" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="python_merkle_patricia_trie" type="b2602c69:ProjectViewProjectNode" />
+              <item name="python_merkle_patricia_trie" type="462c0819:PsiDirectoryNode" />
+              <item name="serializer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="python_merkle_patricia_trie" type="b2602c69:ProjectViewProjectNode" />
+              <item name="python_merkle_patricia_trie" type="462c0819:PsiDirectoryNode" />
+              <item name="storage" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="python_merkle_patricia_trie" type="b2602c69:ProjectViewProjectNode" />
+              <item name="python_merkle_patricia_trie" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="python_merkle_patricia_trie" type="b2602c69:ProjectViewProjectNode" />
+              <item name="python_merkle_patricia_trie" type="462c0819:PsiDirectoryNode" />
+              <item name="trie" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/trie" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python tests.py.test for test_trie_insertion_deletion.test_update_get_different_roots">
+    <configuration name="py.test for test_trie_insertion_deletion.test_update_get_different_roots" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="python_merkle_patricia_trie" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_trie_insertion_deletion.test_update_get_different_roots&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="py.test for test_trie_insertion_deletion.test_update_get_from_trie_large" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="python_merkle_patricia_trie" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_trie_insertion_deletion.test_update_get_from_trie_large&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="py.test in test_trie_insertion_deletion.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="python_merkle_patricia_trie" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_trie_insertion_deletion.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python tests.py.test in test_trie_insertion_deletion.py" />
+      <item itemvalue="Python tests.py.test for test_trie_insertion_deletion.test_update_get_from_trie_large" />
+      <item itemvalue="Python tests.py.test for test_trie_insertion_deletion.test_update_get_different_roots" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python tests.py.test for test_trie_insertion_deletion.test_update_get_different_roots" />
+        <item itemvalue="Python tests.py.test in test_trie_insertion_deletion.py" />
+        <item itemvalue="Python tests.py.test for test_trie_insertion_deletion.test_update_get_from_trie_large" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f9b38bff-cf9f-4603-83ef-05663b3a0f1a" name="Default" comment="" />
+      <created>1527926473754</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1527926473754</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="py_test_for_test_trie_insertion_deletion_test_update_get_different_roots - 2018.06.03 at 14h 59m 54s.xml">
+      <configuration name="py.test for test_trie_insertion_deletion.test_update_get_different_roots" configurationId="tests" />
+    </history-entry>
+    <history-entry file="py_test_for_test_trie_insertion_deletion_test_update_get_different_roots - 2018.06.03 at 15h 01m 58s.xml">
+      <configuration name="py.test for test_trie_insertion_deletion.test_update_get_different_roots" configurationId="tests" />
+    </history-entry>
+    <history-entry file="py_test_for_test_trie_insertion_deletion_test_update_get_different_roots - 2018.06.03 at 15h 03m 26s.xml">
+      <configuration name="py.test for test_trie_insertion_deletion.test_update_get_different_roots" configurationId="tests" />
+    </history-entry>
+    <history-entry file="py_test_for_test_trie_insertion_deletion_test_update_get_different_roots - 2018.06.03 at 15h 03m 49s.xml">
+      <configuration name="py.test for test_trie_insertion_deletion.test_update_get_different_roots" configurationId="tests" />
+    </history-entry>
+    <history-entry file="py_test_in_test_trie_insertion_deletion_py - 2018.06.03 at 15h 07m 57s.xml">
+      <configuration name="py.test in test_trie_insertion_deletion.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="py_test_for_test_trie_insertion_deletion_test_update_get_different_roots - 2018.06.03 at 15h 08m 06s.xml">
+      <configuration name="py.test for test_trie_insertion_deletion.test_update_get_different_roots" configurationId="tests" />
+    </history-entry>
+    <history-entry file="py_test_for_test_trie_insertion_deletion_test_update_get_different_roots - 2018.06.03 at 15h 10m 21s.xml">
+      <configuration name="py.test for test_trie_insertion_deletion.test_update_get_different_roots" configurationId="tests" />
+    </history-entry>
+    <history-entry file="py_test_for_test_trie_insertion_deletion_test_update_get_different_roots - 2018.06.03 at 15h 11m 30s.xml">
+      <configuration name="py.test for test_trie_insertion_deletion.test_update_get_different_roots" configurationId="tests" />
+    </history-entry>
+    <history-entry file="py_test_for_test_trie_insertion_deletion_test_update_get_different_roots - 2018.06.03 at 15h 17m 46s.xml">
+      <configuration name="py.test for test_trie_insertion_deletion.test_update_get_different_roots" configurationId="tests" />
+    </history-entry>
+    <history-entry file="py_test_for_test_trie_insertion_deletion_test_update_get_different_roots - 2018.06.03 at 15h 18m 03s.xml">
+      <configuration name="py.test for test_trie_insertion_deletion.test_update_get_different_roots" configurationId="tests" />
+    </history-entry>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="1920" height="1044" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Favorites" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14739583" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Tail" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Python Console" />
+      <window_info anchor="bottom" id="Terminal" weight="0.32919255" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32919255" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32919255" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39958593" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Cargo" />
+      <window_info anchor="right" id="PlantUML" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/trie/trie.py</url>
+          <line>195</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="evaluateCodeFragment">
+      <expression>
+        <expression-string>self.db.get(node[1])</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>self.node_serializer.deserialize_to_node(self.db.get(node[1]))</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>isinstance(node[1], list)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>self._get_inner_node_from_extension(node)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/utils.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/.virtualenvs/python_merkle_patricia_trie/lib/python3.5/site-packages/eth_utils/conversions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-191">
+          <caret line="81" column="4" selection-start-line="81" selection-start-column="4" selection-end-line="81" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.virtualenvs/python_merkle_patricia_trie/lib/python3.5/site-packages/eth_utils/types.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.virtualenvs/python_merkle_patricia_trie/lib/python3.5/site-packages/rlp/codec.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/conftest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="13" column="16" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/storage/refcount_db.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-237">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+            <marker date="1528014047873" expanded="true" signature="1594:1599" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/serializer/hasher.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/.virtualenvs/python_merkle_patricia_trie/lib/python3.5/site-packages/rlp/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trie/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="92" column="4" selection-start-line="92" selection-start-column="4" selection-end-line="92" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+            <marker date="1528014047869" expanded="true" signature="3595:3600" ph="..." />
+            <marker date="1528014047869" expanded="true" signature="3770:3775" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/storage/ephem_db.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+            <marker date="1528013723729" expanded="true" signature="623:628" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/lib/python3.5/string.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/helper.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+            <marker date="1528058730265" expanded="true" signature="54:55" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.virtualenvs/python_merkle_patricia_trie/lib/python3.5/site-packages/setuptools-39.1.0-py3.5.egg!/setuptools/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="125" column="4" selection-start-line="125" selection-start-column="4" selection-end-line="125" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/serializer/rlp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="17" column="28" selection-start-line="16" selection-start-column="4" selection-end-line="17" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trie/trie.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+          <folding>
+            <marker date="1528060107323" expanded="true" signature="2175:2194" ph="..." />
+            <marker date="1528060107323" expanded="true" signature="12389:12578" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trie/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/serializer/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/serializer/serializer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+          <folding>
+            <marker date="1528060596792" expanded="true" signature="225:230" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="23" column="12" lean-forward="true" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
+          <folding>
+            <element signature="e#138#147#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trie/constants.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_trie_insertion_deletion.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="47" column="48" lean-forward="true" selection-start-line="47" selection-end-line="47" selection-end-column="48" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+            <marker date="1528060663169" expanded="true" signature="146:488" ph="..." />
+            <marker date="1528060663169" expanded="true" signature="1231:1232" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
