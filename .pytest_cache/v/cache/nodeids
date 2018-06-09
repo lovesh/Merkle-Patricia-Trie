@@ -1,7 +1,0 @@
-[
-  "tests/test_key_prefix.py::test_get_prefix_nodes",
-  "tests/test_key_prefix.py::test_proof_prefix_only_prefix_nodes",
-  "tests/test_key_prefix.py::test_proof_prefix_with_other_nodes",
-  "tests/test_key_prefix.py::test_proof_prefix_with_other_nodes_1",
-  "tests/test_key_prefix.py::test_proof_multiple_prefix_nodes"
-]

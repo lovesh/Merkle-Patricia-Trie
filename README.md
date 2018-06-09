@@ -8,6 +8,5 @@ Most of the implementation is borrowed from [pyethereum](https://github.com/ethe
 The API is little different from pyethereum though.
 
 TODO:
--   Complete support for prefix nodes
 -   Support proof of absence
 -   Trie pruning
